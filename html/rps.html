@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="../css/rps.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="body_rps">
+    <header>
+        <div class="title">
+            <h1>Web Dev<br><p class="name">Devin W</p><a href="../index.html"><i class="fa-solid fa-house fa-lg"></i></a></h1>
+        </div>
+        <a href="monogram.html">Monogram</a>
+        <a href="strawberries.html">Strawberries!</a>
+        <a href="flex-box.html">Flex Box</a>
+        <a href="flex-box-chal.html">Flexbox Challenge</a>
+    </header>
+    <hr class="horru" color="black">
+    <main class="main_rps">
+        <h1 class="h1_rps">Rock, Paper, Scissors</h1>
+        <div class="choice-container">
+            <div class="user-frame">
+                <h2 class="h2_rps">User Choice</h2>
+                <img src="../imgs/rps_imgs/rps4.png" class='user-img' alt="rps">
+                <h2 class="h2_rps">Score: <span class="user_score">-</span></h2>
+            </div>
+            <div class="computer-frame">
+                <h2 class="h2_rps">Computer Choice</h2>
+                <img src="../imgs/rps_imgs/rps4.png" class='comp-img' alt="rps">
+                <h2 class="h2_rps">Score: <span class="comp_score">-</span></h2>
+            </div>
+        </div>
+        
+        <h2 class="h2_rps">Result: <span class="result">Start Game</span></h2>
+
+        <div class="user-choices">
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+        </div>
+        <div class="reset-btn">
+            <button id ='reset'>Reset</button>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_left">
+            Contact:
+            <br>
+            <br>
+            (207) 123-4567
+            <br>
+            <br>
+            email@gmail.com
+        </div>
+        <div class="footer_right">
+            123 Main Street Portland, ME 04103
+            <br>
+            <br>
+            <i class="fa-regular fa-copyright"></i> Devin Walker 2023
+            <br>
+            <br>
+            Proudly Sponsored By: Portland Public Scools
+        </div>
+        <div class="link_icons">
+            <a href="https://github.com/DevinWalker30/webDev" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </footer>
+    
+    
+    <script src="../js/rps.js"></script>
+</body>
+</html>

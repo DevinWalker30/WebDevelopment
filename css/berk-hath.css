@@ -1,0 +1,53 @@
+body {
+    color: navy;
+}
+
+a  {
+    color: rgb(112, 45, 133);
+}
+
+a:hover {color: blue;}
+
+.address {
+    color: navy;
+    text-align: center;
+    font-weight: bold;
+    margin: 0%;
+
+}
+
+.top-line{
+    font-size: 20px;
+}
+
+.mid-line {
+    font-size: 13px;
+}
+
+.bot-line {
+    margin-bottom: 15px;
+}
+
+.caps {
+    font-size: 30px;
+}
+
+.inc {
+    font-size: 14px;
+}
+
+li {
+    margin: 20px;
+}
+
+.geico-line {
+    text-align: center;
+    font-size: small;
+}
+
+.geico {
+    font-weight: bold;
+    font-size: large;
+    text-transform: uppercase;
+    text-align: center;
+}

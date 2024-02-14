@@ -1,0 +1,31 @@
+body {
+    background-image: url(../imgs/red-background.jpg);
+}
+
+.mid-box {
+    border: 5px solid black;
+    background-color: white;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.image {
+    border: 5px dashed red;
+}
+
+p {
+    text-align: left;
+    margin: 2% 10%;
+}
+
+.red-words {
+    font-size: x-large;
+    color: red;
+    font-weight: bold;
+}
+
+.list {
+    text-align: left;
+    margin: 2% 10%;
+}

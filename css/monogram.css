@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0efed;
+}
+
+.hero-section {
+    padding-top: 1em;
+    padding-bottom: 10em;
+    background-image: url(../imgs/electronic-5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    color: #ff8b68;
+    background-color: #1a2456;
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    margin-bottom: 10em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: .5em;
+}
+
+.header-left p {
+    margin-left: .5em;
+    padding-top: .75em;
+    padding-bottom: .75em;
+    font-size: clamp(1rem, 1.75vw, 2rem);
+    text-transform: uppercase;
+}
+
+.header-left i {
+    margin-left: .5em;
+    font-size: clamp(1.25rem, 1.75vw, 3rem);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f76539;
+}
+
+nav a {
+    color: #ff8b68;
+    font-size: clamp(.25rem, 2vw, 1rem);
+    margin-right: .75em;
+    text-transform: uppercase;
+}
+
+.hero {
+    color: #ff8b68;
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    width: 50%;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.hero p {
+    width: 60%;
+    margin: 1rem auto;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: clamp(1rem, 1vw, 4rem);
+}
+
+.products {
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.product {
+    width: clamp(25em, 48%, 60em);
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: space-between;
+    position: relative;
+    cursor: pointer;
+}
+
+.product img {
+    aspect-ratio: 16/9;
+}
+
+.item {
+    margin: .25em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-description {
+    margin: .5em 0;
+}
+
+.item-name {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+footer {
+    color: #ff8b68;
+    background-color: #1a2456;
+    padding-left: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer a {
+    color: #ff8b68;
+    padding-bottom: .25em;
+}
+
+footer p {
+    padding-bottom: .25em;
+}
+
+.footer-col {
+    max-width: 25em;
+    margin: .5em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-txt {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: .2em .25em;
+    border-radius: 6px;
+    background-color: rgb(223, 223, 223);
+    transition-duration: .3s;
+}
+
+button:hover {
+    color: #f76539;
+    background-color: #1a2456;
+}
+
+h5 {
+    padding-bottom: .5em;
+}
+
+form {
+    padding-top: .25em;
+}
+
+input[type=text]::placeholder {
+    background-color: #1a2456;
+    color: #4b59a0;
+    padding: .5em;
+}
+
+input[type=text]:focus {
+    background-color: lightgrey;
+}
+
+@media (max-width: 700px) {
+    footer {
+        flex-direction: column-reverse;
+    }
+}
+
+.pre-order-btn,
+.shop-btn {
+    text-transform: uppercase;
+    padding: .3rem .45rem;
+    font-size: .8rem;
+    font-weight: bold;
+    letter-spacing: .07rem;
+}
+
+.pre-order-btn {
+    background-color: #ff8b68;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
+.shop-btn {
+    background-color: #1a2456;
+    color: white;
+    border-radius: 20px;
+    display: none;
+}
