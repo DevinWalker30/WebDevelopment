@@ -5,12 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro Section</title>
     <link rel="stylesheet" href="../css/intro-sec.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
 </head>
 <body>
+    <div class="collapse-menu">
+        <div class="x">
+            <i class="fa-solid fa-x" id="x"></i>
+        </div>
+        <div class="link-login" id="link-log">
+            <div class="link">
+                <div class="feature">
+                    <span class="feat">
+                        Features <img src="../imgs/intro-sec-imgs/icon-arrow-up.svg" id="0" class="arrow" alt="arrow up">
+                    </span>
+                    <div class="col-menu features-links">
+                        <a href="#"><img src="../imgs/intro-sec-imgs/icon-todo.svg" alt="To do list">Todo list</a>
+                        <a href="#"><img src="../imgs/intro-sec-imgs/icon-calendar.svg" alt="Calendar">Calendar</a>
+                        <a href="#"><img src="../imgs/intro-sec-imgs/icon-reminders.svg" alt="Bell">Reminders</a>
+                        <a href="#"><img src="../imgs/intro-sec-imgs/icon-planning.svg" alt="Target">Planning</a>
+                    </div>
+                </div>
+                <div class="companys">
+                    <span class="comp">
+                        Company <img src="../imgs/intro-sec-imgs/icon-arrow-up.svg" id="1" class="arrow" alt="arrow up">
+                    </span>
+                    <div class="col-menu company-links">
+                        <a href="#">History</a>
+                        <a href="#">Our Team</a>
+                        <a href="#">Blog</a>
+                    </div>
+                </div>
+                <a href="#">Careers</a>
+                <a href="#">About</a>
+            </div>
+            <div class="login">
+                <a href="#">Login</a>
+                <a href="#" class="register">Register</a>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="logo">
             <img src="../imgs/intro-sec-imgs/logo.svg" alt="snap">
@@ -18,8 +55,10 @@
         <div class="links-login">
             <div class="links">
                 <div class="features">
-                    Features <img src="../imgs/intro-sec-imgs/icon-arrow-up.svg" class="arrow" alt="arrow up">
-                    <div class="features-links">
+                    <span class="feat">
+                        Features <img class="img" id="0" src="../imgs/intro-sec-imgs/icon-arrow-up.svg" alt="arrow up">
+                    </span>
+                    <div class="menu features-links">
                         <a href="#"><img src="../imgs/intro-sec-imgs/icon-todo.svg" alt="To do list">Todo list</a>
                         <a href="#"><img src="../imgs/intro-sec-imgs/icon-calendar.svg" alt="Calendar">Calendar</a>
                         <a href="#"><img src="../imgs/intro-sec-imgs/icon-reminders.svg" alt="Bell">Reminders</a>
@@ -27,8 +66,10 @@
                     </div>
                 </div>
                 <div class="company">
-                    Company <img src="../imgs/intro-sec-imgs/icon-arrow-up.svg" class="arrow" alt="arrow up">
-                    <div class="company-links">
+                    <span class="comp">
+                        Company <img class="img" id="1" src="../imgs/intro-sec-imgs/icon-arrow-up.svg" alt="arrow up">
+                    </span>
+                    <div class="menu company-links">
                         <a href="#">History</a>
                         <a href="#">Our Team</a>
                         <a href="#">Blog</a>
@@ -41,6 +82,9 @@
                 <a href="#">Login</a>
                 <a href="#" class="register">Register</a>
             </div>
+        </div>
+        <div class="bars">
+            <i class="fa-solid fa-bars-staggered" id="hamburg"></i>
         </div>
     </header>
     <main>
@@ -59,5 +103,7 @@
             <img src="../imgs/intro-sec-imgs/image-hero-desktop.png" alt="Laptop Man">
         </div>
     </main>
+
+    <script src="../js/intro-sec.js"></script>
 </body>
 </html>

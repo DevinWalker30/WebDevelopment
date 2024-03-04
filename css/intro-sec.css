@@ -15,6 +15,7 @@ a:hover {
 
 header {
     display: flex;
+    padding-bottom: 2rem;
 }
 
 .logo {
@@ -42,7 +43,7 @@ header {
 
 .features-links,
 .company-links {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     margin-top: .5rem;
@@ -61,11 +62,45 @@ header {
     padding-right: .5rem;
 }
 
+.img:hover {
+    cursor: pointer;
+}
+
 .log-in {
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 20%;
+}
+
+.bars {
+    display: none;
+}
+
+.collapse-menu {
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    font-size: 2rem;
+    font-weight: 5rem;
+    box-shadow: -15rem 0 20rem darkgrey;
+    display: none;
+}
+
+.x {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding-bottom: .5rem;
+}
+
+.fa-x {
+    padding-top: 1.25rem;
+    padding-right: 1.5rem;
 }
 
 .register {
@@ -117,7 +152,8 @@ main {
     border: 1px solid black;
     background-color: black;
     border-radius: 10px;
-    padding: .4rem;
+    padding: .65rem 1rem;
+    font-size: 1.25rem;
     font-weight: 400;
 }
 
@@ -138,4 +174,77 @@ main {
 
 .logo-imgs img {
     padding-right: 2rem;
+}
+
+@media(max-width:430px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .links-login {
+        display: none;
+    }
+    .link-login {
+        display: none;
+        flex-direction: column;
+        font-size: 1.5rem;
+        height: 100%;
+        padding-left: .5rem;
+    }
+    .feature,
+    .companys {
+        position: relative;
+    }
+    .feature,
+    .companys,
+    .link,
+    .login {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        /* border: 2px solid red; */
+    }
+    .col-menu {
+        top: 1rem;
+    }
+    .login {
+        align-items: center;
+        padding-right: .5rem;
+    }
+    .register {
+        width: 90%;
+        text-align: center;
+    }
+    .bars {
+        display: flex;
+        font-size: 2rem;
+    }
+    main {
+        flex-direction: column-reverse;
+        padding: none;
+    }
+    .main-right img {
+        content: url('../imgs/intro-sec-imgs/image-hero-mobile.png');
+        width: 100%;
+        height: auto;
+    }
+    br {
+        content: 'none';
+    }
+    br::after {
+        content: ' ';
+    }
+    .main-left {
+        text-align: center;
+    }
+    .heading {
+        font-size: 2rem;
+    }
+    .body-para {
+        font-size: 1.25rem;
+    }
+    .logo-imgs img {
+        width: 25%;
+        height: auto;
+    }
 }
