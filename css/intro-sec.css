@@ -103,6 +103,20 @@ header {
     padding-right: 1.5rem;
 }
 
+.careers-about {
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.careers-about a {
+    padding: .5rem 0;
+}
+
+.login a {
+    padding: .75rem 0;
+}
+
 .register {
     border: 1px solid black;
     padding: .5rem;
@@ -194,6 +208,9 @@ main {
     .feature,
     .companys {
         position: relative;
+    }
+    .companys {
+        top: 50px;
     }
     .feature,
     .companys,
