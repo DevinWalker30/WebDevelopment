@@ -6,6 +6,8 @@ const linksBtn = document.getElementById('hamburg-menu')
 
 const links = document.querySelector('.links')
 
+const stockPrice = document.querySelector('.output')
+
 // btnOne.addEventListener('click', () => {
 //     whichOne(btnOne, answerOne)
 //     // btnOne.src = '/imgs/icon-minus.svg'
@@ -23,7 +25,7 @@ const links = document.querySelector('.links')
 // }
 
 btns.forEach(button => {
-    console.log(button.src)
+    // console.log(button.src)
 
     button.addEventListener('click', () => {
         let index = parseInt(button.id)
@@ -46,3 +48,26 @@ linksBtn.addEventListener('click', () => {
         links.style.display = 'none'
     }
 })
+
+
+
+const url = 'https://yahoo-finance127.p.rapidapi.com/price/eth-usd';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '396bcd6bf8msh21afe07df2440ffp1c890ejsn12fe4097bc7d',
+		'X-RapidAPI-Host': 'yahoo-finance127.p.rapidapi.com'
+	}
+};
+
+async function getPrice() {
+    try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+        console.log(result.exchange);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+getPrice()
