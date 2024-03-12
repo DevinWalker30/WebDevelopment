@@ -116,6 +116,64 @@ main {
     position: relative;
 }
 
+.weather {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(darkblue,lightblue);
+    color: white;
+    height: fixed;
+    border-radius: 10px;
+    top: .5rem;
+    right: 1rem;
+    padding: 0 1rem;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+.weather-left {
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
+}
+
+.weather-left h4,
+.weather-left p {
+    margin: 0;
+}
+
+.weather h4 {
+    font-weight: 500;
+    font-size: 1.25rem;
+    padding-top: .5rem;
+}
+
+.weather-left p {
+    font-weight: 400;
+    font-size: 1rem;
+    padding-top: .25rem;
+}
+
+.weather-p-bot {
+    padding-bottom: .5rem;
+}
+
+.weather-mid img {
+    border-radius: 100%;
+    box-shadow: 5px -5px 15px rgb(255, 255, 85) inset;
+    padding: .5rem;
+}
+
+.weather-right {
+    font-size: 1rem;
+    padding-left: 2rem;
+}
+
+.weather-right p {
+    margin: 0;
+}
+
 .four-cards {
     background-color: white;
     font-family: 'Poppins', sans-serif;
@@ -285,6 +343,10 @@ main {
     font-weight: 600;
     font-size: large;
     padding-left: 1rem;
+}
+
+.btn:hover {
+    cursor: pointer;
 }
 
 .answer {
