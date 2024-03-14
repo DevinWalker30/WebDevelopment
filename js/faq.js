@@ -8,6 +8,18 @@ const links = document.querySelector('.links')
 
 const stockPrice = document.querySelector('.output')
 
+const city = document.getElementById('city')
+
+const currentDate = document.getElementById('date')
+
+const currentTime = document.getElementById('time')
+
+const weathImg = document.getElementById('weath-img')
+
+const temp = document.getElementById('temp')
+
+const desc = document.getElementById('desc')
+
 // btnOne.addEventListener('click', () => {
 //     whichOne(btnOne, answerOne)
 //     // btnOne.src = '/imgs/icon-minus.svg'
@@ -70,4 +82,31 @@ async function getPrice() {
     }
 }
 
-getPrice()
+const dateObject = new Date()
+const day = dateObject.getDate()
+const month = dateObject.getMonth()+1
+const year = dateObject.getFullYear()
+let hour = dateObject.getHours()
+let minute = dateObject.getMinutes()
+let amPm = 'AM'
+
+if (minute < 10) {
+    minute = '0' + minute.toString()
+}
+
+if (hour > 12) {
+    hour = hour - 12
+    amPm = 'PM'
+}
+
+if (hour = 12) {
+    amPm = 'PM'
+}
+
+let time = `${hour}:${minute} ${amPm}`
+let date = `${month}-${day}-${year}`
+
+console.log(time)
+
+currentTime.innerText = time
+currentDate.innerText = date
