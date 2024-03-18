@@ -16,9 +16,11 @@ const currentTime = document.getElementById('time')
 
 const weathImg = document.getElementById('weath-img')
 
-const temp = document.getElementById('temp')
+let currentTemp = document.getElementById('temp')
 
 const desc = document.getElementById('desc')
+
+const apiKey = '5c244f90ff05ec5b3599c24d38b1ead7'
 
 // btnOne.addEventListener('click', () => {
 //     whichOne(btnOne, answerOne)
@@ -63,7 +65,7 @@ linksBtn.addEventListener('click', () => {
 
 
 
-const url = 'https://yahoo-finance127.p.rapidapi.com/price/eth-usd';
+// const url = 'https://yahoo-finance127.p.rapidapi.com/price/eth-usd';
 const options = {
 	method: 'GET',
 	headers: {
@@ -89,6 +91,11 @@ const year = dateObject.getFullYear()
 let hour = dateObject.getHours()
 let minute = dateObject.getMinutes()
 let amPm = 'AM'
+const clouds = ['few clouds', 'scattered clouds', 'broken clouds']
+const rain = ['shower rain', 'rain', 'mist']
+let lat = 43.6591
+let lon = -70.2568
+let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`
 
 if (minute < 10) {
     minute = '0' + minute.toString()
@@ -99,14 +106,46 @@ if (hour > 12) {
     amPm = 'PM'
 }
 
-if (hour = 12) {
+if (hour == 12) {
     amPm = 'PM'
 }
 
 let time = `${hour}:${minute} ${amPm}`
 let date = `${month}-${day}-${year}`
 
-console.log(time)
-
 currentTime.innerText = time
 currentDate.innerText = date
+
+async function getWeather() {
+    try {
+        const response = await fetch(url)
+        const data = await response.json()
+        currentTemp.textContent = `${Math.round(data.main.temp)}°F`
+        let description = data.weather[0].main
+        let condition = data.weather[0].description
+        desc.textContent = description
+
+        if (clouds.includes(condition)) {
+            img = 'partly-cloudy.png'
+        }
+        else if (rain.includes(condition)) {
+            img = 'rain.png'
+        }
+        else if (condition == 'thunderstorm') {
+            img = 'rain-storm.png'
+        }
+        else if (condition == 'snow') {
+            img = 'snow.png'
+        }
+        else {
+            img = 'sunny.png'
+        }
+
+        weathImg.src = `../imgs/${img}`
+
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+getWeather()
