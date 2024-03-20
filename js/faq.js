@@ -8,7 +8,7 @@ const links = document.querySelector('.links')
 
 const stockPrice = document.querySelector('.output')
 
-const city = document.getElementById('city')
+const currentCity = document.getElementById('city')
 
 const currentDate = document.getElementById('date')
 
@@ -21,6 +21,8 @@ let currentTemp = document.getElementById('temp')
 const desc = document.getElementById('desc')
 
 const apiKey = '5c244f90ff05ec5b3599c24d38b1ead7'
+
+const geoapifyKey = `88c9632fe6344b19ac505a1f6a4d8df4`
 
 // btnOne.addEventListener('click', () => {
 //     whichOne(btnOne, answerOne)
@@ -91,11 +93,13 @@ const year = dateObject.getFullYear()
 let hour = dateObject.getHours()
 let minute = dateObject.getMinutes()
 let amPm = 'AM'
-const clouds = ['few clouds', 'scattered clouds', 'broken clouds']
+const clouds = ['few clouds', 'scattered clouds', 'broken clouds', 'overcast clouds']
 const rain = ['shower rain', 'rain', 'mist']
 let lat = 43.6591
 let lon = -70.2568
+let geoapifyUrl = `https://api.geoapify.com/v1/ipinfo?apiKey=${geoapifyKey}`
 let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`
+
 
 if (minute < 10) {
     minute = '0' + minute.toString()
@@ -118,12 +122,20 @@ currentDate.innerText = date
 
 async function getWeather() {
     try {
-        const response = await fetch(url)
+        const given = await fetch(geoapifyUrl)
+        const info = await given.json()
+        lat = info.location.latitude
+        lon = info.location.longitude
+        let city = info.city.name
+        let state = info.state.name
+        currentCity.innerText = `${city}, ${state}`
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`)
         const data = await response.json()
         currentTemp.textContent = `${Math.round(data.main.temp)}°F`
         let description = data.weather[0].main
         let condition = data.weather[0].description
         desc.textContent = description
+        console.log(condition)
 
         if (clouds.includes(condition)) {
             img = 'partly-cloudy.png'
