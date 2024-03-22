@@ -159,11 +159,11 @@ main {
     padding-bottom: .5rem;
 }
 
-/* .weather-mid img {
+.weather-mid img {
     border-radius: 100%;
-    box-shadow: 0px 0px 25px yellow inset, 0px 0px 30px yellow;
+    /* box-shadow: 0px 0px 25px yellow inset, 0px 0px 30px yellow; */
     padding: .5rem;
-} */
+}
 
 .weather-right {
     font-size: 1rem;
