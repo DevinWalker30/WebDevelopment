@@ -158,6 +158,8 @@ async function getWeather() {
         desc.textContent = description
         console.log(condition)
 
+        let img = 'sunny.png'
+
         if (clouds.includes(condition)) {
             img = 'partly-cloudy.png'
         }
@@ -170,12 +172,8 @@ async function getWeather() {
         else if (condition == 'snow') {
             img = 'snow.png'
         }
-        else {
-            img = 'sunny.png'
-        }
 
-        // weathImg.src = `imgs/${img}`
-        weathImg.src = `imgs/rain.png`
+        weathImg.src = `imgs/${img}`
 
     } catch (error) {
         console.error(error)
