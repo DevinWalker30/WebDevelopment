@@ -120,6 +120,27 @@ let date = `${month}-${day}-${year}`
 currentTime.innerText = time
 currentDate.innerText = date
 
+// async function getLocat() {
+//     try {
+//         const response = await fetch(geoapifyUrl)
+//         const data = await response.json()
+//         const lat = data.location.latitude
+//         const lon = data.location.longitude
+//         const coords = [lat, lon]
+//         return coords
+//     }
+//     catch (error) {
+//         console.error(error)
+//     }
+// }
+
+// getLocat().then(c => getTime(c))
+
+// const lat = coords[0]
+// const lon = coords[1]
+// const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`)
+// ^ In the other function ^
+
 async function getWeather() {
     try {
         const given = await fetch(geoapifyUrl)
