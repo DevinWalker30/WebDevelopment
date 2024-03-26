@@ -94,7 +94,7 @@ let hour = dateObject.getHours()
 let minute = dateObject.getMinutes()
 let amPm = 'AM'
 const clouds = ['few clouds', 'scattered clouds', 'broken clouds', 'overcast clouds']
-const rain = ['shower rain', 'rain', 'mist', 'moderate rain']
+const rain = ['shower rain', 'rain', 'mist', 'moderate rain', 'light rain']
 let lat = 43.6591
 let lon = -70.2568
 let geoapifyUrl = `https://api.geoapify.com/v1/ipinfo?apiKey=${geoapifyKey}`
