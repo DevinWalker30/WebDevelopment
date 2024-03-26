@@ -174,7 +174,8 @@ async function getWeather() {
             img = 'sunny.png'
         }
 
-        weathImg.src = `imgs/${img}`
+        // weathImg.src = `imgs/${img}`
+        weathImg.src = `imgs/rain.png`
 
     } catch (error) {
         console.error(error)
